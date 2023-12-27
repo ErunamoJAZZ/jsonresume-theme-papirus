@@ -35,16 +35,16 @@
 		<div class="date">
 			{{#if startDate}}
 			<span class="startDate">
-				{{formatDateYear startDate}}
+				{{formatDateYear startDate}} -
 			</span>
 			{{/if}}
 			{{#if endDate}}
 			<span class="endDate">
-				- {{formatDateYear endDate}}
+				{{formatDateYear endDate}}
 			</span>
 			{{else}}
 			<span class="endDate">
-				- Present
+				Present
 			</span>
 			{{/if}}
 		</div>

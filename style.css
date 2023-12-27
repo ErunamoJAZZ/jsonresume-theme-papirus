@@ -1,6 +1,6 @@
 body {
   background: #E5DED4;
-  font: 15px Arial, Helvetica, sans-serif;
+  font: 15px Helvetica, sans-serif, Arial;
   line-height: 1.4;
   color: #929292;
 }
@@ -17,12 +17,12 @@ body {
 }
 
 section {
-  margin-bottom: 5rem;
+  margin-bottom: 0;
 }
 
 [class^="section-"] > .title {
   text-transform: uppercase;
-  padding: 15px 0;
+  padding: 0.7rem 0;
   margin: 0;
 }
 
@@ -30,6 +30,7 @@ section {
 [class^="section-"] > .title span {
   display: inline-block;
   vertical-align: middle;
+  margin-top: 1rem;
 }
 
 [class^="section-"] > .title span {
@@ -98,10 +99,12 @@ section {
 
 .section-education .institution {
   font-size: 1.2rem;
+  padding: 0 1ex;
 }
 
 .section-education .date {
   font-size: 1.2rem;
+  padding: 0 1ex;
 }
 
 .sidebar a:link, .sidebar a:hover, .sidebar a:visited {
@@ -174,11 +177,6 @@ section {
     padding: 0.5rem 0 0.5rem 0;
     color: #6D6D6D;
     font-weight: bold;
-}
-
-.section-work .item .summary, .section-work .item .highlights {
-    font-style: italic;
-    text-align: justify;
 }
 
 .section-volunteer .item {
@@ -289,7 +287,7 @@ section {
 
 .section-contact ul.profiles {
   list-style-type: none;
-  margin: 4rem 0 0.5rem 0;
+  margin: 1rem 0 0.5rem 0;
   padding: 0;
 }
 
@@ -300,11 +298,13 @@ section {
 /* Print */
 @media print {
   body {
-    font: 10px Arial, Helvetica, sans-serif;
-    line-height: 1.4;
+    font: 9.5pt 'Roboto Condensed';
+    line-height: 1.0;
     color: #929292 !important;
   }
-
+  a[href]:after {
+    content: normal !important;
+  }
   .container {
     margin: 0 auto;
     padding: 0;
@@ -315,37 +315,9 @@ section {
     border: none !important;
   }
 
-  section {
-    margin-bottom: 2.5rem;
-  }
-
-  [class^="section-"] > .title {
-    text-transform: uppercase;
-    padding: 0.7rem 0;
-    margin: 0;
-  }
-
-  [class^="section-"] > .title .title-icon,
-  [class^="section-"] > .title span {
-    display: inline-block;
-    vertical-align: middle;
-  }
-
-  [class^="section-"] > .title span {
-    margin-left: 2px;
-  }
-
-  [class^="section-"] > .title .title-icon {
-    background-color: whitesmoke;
-    border-radius: 50%;
-    width: 2rem;
-    height: 2rem;
-    padding: 0.4rem 0.45rem;
-  }
-
   /* Sidebar */
   .sidebar {
-    padding: 2rem;
+    padding-left: 2rem;
     background: #333438 !important;
     margin-bottom: -99999px;
     padding-bottom: 99999px;
@@ -380,7 +352,7 @@ section {
   }
 
   .section-education .item {
-    margin-bottom: 3rem;
+    margin-bottom: 0;
 		color: #ffffff !important;
   }
 
@@ -432,7 +404,7 @@ section {
 
   /* Content */
   .content {
-    padding: 3rem 5rem 3rem 2rem;
+    padding: 1rem 2rem 1rem 1rem;
     background: #FFFFFF !important;
     margin-bottom: -99999px;
     padding-bottom: 99999px;
@@ -442,8 +414,8 @@ section {
     color: #3C3C3C !important;
     text-transform: uppercase;
     text-align: center;
-    font-size: 2.5rem;
-    letter-spacing: 1.0rem;
+    font-size: 2.0rem;
+    letter-spacing: 0.5rem;
     font-weight: bold;
   }
 
@@ -451,7 +423,7 @@ section {
     color: #6D6D6D !important;
     text-transform: uppercase;
     text-align: left;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     letter-spacing: 0.5rem;
     font-weight: bold;
     margin-top: 2rem;
@@ -464,7 +436,7 @@ section {
 
   /* Sections */
   .section-name {
-    margin: 1rem 0 5rem 0;
+    margin: 1rem 0 0rem 0;
   }
 
   .section-name h2 {
@@ -474,7 +446,7 @@ section {
     font-size: 1.2rem;
     letter-spacing: 0.5rem;
     font-weight: bold;
-    margin-top: 3rem;
+    margin-top: 0;
   }
 
   .section-summary {
@@ -482,7 +454,7 @@ section {
   }
 
   .section-work .item {
-    margin-bottom: 2.5rem;
+    margin-bottom: 0.5rem;
   }
 
   .section-work .item .position {
@@ -492,14 +464,14 @@ section {
   }
 
   .section-work .item .company {
-      padding: 0.5rem 0 0.5rem 0;
-      color: #6D6D6D !important;
-      font-weight: bold;
+    padding: 0.5rem 0 0.5rem 0;
+    color: #6D6D6D !important;
+    font-weight: bold;
   }
 
   .section-work .item .summary, .section-work .item .highlights {
-      font-style: italic;
-      text-align: justify;
+    font-style: italic;
+    text-align: left;
   }
 
   .section-volunteer .item {
@@ -597,7 +569,7 @@ section {
   .section-skills .keywords span.label {
       color: #000 !important;
       background: #929292 !important;
-      line-height: 1.7rem;
+      line-height: 2.1rem;
   }
 
 
@@ -620,18 +592,12 @@ section {
   }
 
   .section-contact ul.contact li {
-    margin: 0.5rem 0 0.5rem 0;
+    margin: 0;
 		color: #ffffff !important;
   }
 
-  .section-contact ul.profiles {
-    list-style-type: none;
-    margin: 4rem 0 0.5rem 0;
-    padding: 0;
-  }
-
   .section-contact ul.profiles li {
-    margin: 0.5rem 0 0.5rem 0;
+    margin: 0;
 		color: #ffffff !important;
   }
 
